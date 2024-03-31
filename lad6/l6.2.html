@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container " ng-app="myapp" ng-controller="myctrl">
+
+        <div class="panel panel-default">
+            <div class="panel-header">
+                <h2>Tinh Thuong Tet</h2>
+            </div>
+            <div class="panel-bpdy">
+                <form class="form-group" action="" method="post" name="frmBonus">
+                    <label for=""><b>Ho Va Ten</b></label>
+                    <input type="text" class="form-control" ng-model="fullname" name="txtFullname" required aria-describedby="helpId" placeholder="">
+                    <span ng-hide="frmBonus.txtFullname.$valid" style="color: red;">
+                        Vui Long Nhap Ten
+                        
+                    </span>
+                    <br>
+                    <label for=""><b>Luong</b></label>
+                    <input type="number" min="2000000" class="form-control" ng-model="salary" name="txtSalary" required>
+                    <span ng-hide="frmBonus.txtSalary.$valid" style="color: red;">
+                        Luong It Nhat 2 trieu
+                        
+                    </span>
+                   
+                </form>
+                <h4 ng-show="frmBonus.$valid">
+                    Thanh Cong
+                </h4>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var app = angular.module("myapp", []);
+        app.controller("myctrl", function ($scope) {
+
+        });
+    </script>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
